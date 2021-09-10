@@ -1,0 +1,7 @@
+<h3>Counter</h3>
+<p id='counterElm'>{{initialValue}}</p>
+
+<script>
+  setInterval(()=> { let counterElm = document.getElementById('counterElm'); counterElm.innerText =
+  (parseInt(counterElm.textContent) + 1).toString(); }, 100);
+</script>
