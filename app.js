@@ -16,4 +16,6 @@ app.get('/', (req, res) => {
 app.use('/products', productRouter);
 app.use('/users', userRouter);
 
+console.log(process.env.DATABASE_URL);
+
 export default app;

@@ -3,9 +3,9 @@ const productRouter = express.Router();
 
 // middleware for product router
 productRouter.use(async (req, res, next) => {
-  console.timeStamp('product router call start ' + req.method);
+  console.log('product router call start ' + req.method);
   await next();
-  console.timeStamp('product router call end ' + req.method);
+  console.log('product router call end ' + req.method);
 });
 
 productRouter.get('/', (req, res) => {
