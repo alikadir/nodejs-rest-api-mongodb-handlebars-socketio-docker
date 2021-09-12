@@ -1,5 +1,8 @@
 import express from 'express';
+import { insertRecord } from '../services/databaseService.js';
 const productRouter = express.Router();
+
+const collectionName = 'product';
 
 // middleware for product router
 productRouter.use(async (req, res, next) => {
@@ -16,8 +19,10 @@ productRouter.get('/:id', (req, res) => {
   res.json([req.params.id]);
 });
 
-productRouter.post('/', (req, res) => {
-  res.json([1, 2, 3, 4]);
+productRouter.post('/', async (req, res) => {
+  const product = req.body;
+  const result = await insertRecord(collectionName, product);
+  res.json(result);
 });
 
 export default productRouter;

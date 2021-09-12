@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    {{#if login}}
+      <li>Welcome {{login.user}}</li>
+    {{else}}
+      <li><a href="/">Sign up </a></li>
+      <li><a href="/">Sign in</a></li>
+    {{/if}}
+  </ul>
+</nav>
