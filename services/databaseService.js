@@ -1,4 +1,5 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
+import mongoDotNotation from 'mongo-dot-notation';
 
 const dbName = process.env.DATABASE_NAME;
 const dbUrl = process.env.DATABASE_URL;
@@ -10,8 +11,7 @@ const doDatabaseOperation = async (operation) => {
   let result = null;
   try {
     await client.connect();
-    const db = client.db(dbName);
-    result = await operation(db);
+    result = await operation(client.db(dbName));
   } catch (err) {
     console.error(err);
   } finally {
@@ -30,14 +30,31 @@ export const insertRecord = async (collectionName, data) => {
   });
 };
 
+export const replaceRecord = async (collectionName, filter, data) => {
+  return doDatabaseOperation((db) => {
+    filter = filterModify(filter);
+    return db.collection(collectionName).replaceOne(filter, data);
+  });
+};
+
 export const updateRecord = async (collectionName, filter, data) => {
   return doDatabaseOperation(async (db) => {
+    filter = filterModify(filter);
+    data = mongoDotNotation.flatten(data);
     return db.collection(collectionName).updateMany(filter, data);
   });
 };
 
-export const deleteRecord = async (collectionName, query) => {
+export const deleteRecord = async (collectionName, filter) => {
   return doDatabaseOperation(async (db) => {
-    db.collection(collectionName).deleteMany(query);
+    filter = filterModify(filter);
+    db.collection(collectionName).deleteMany(filter);
   });
+};
+
+const filterModify = (filter) => {
+  if (filter._id) {
+    filter._id = ObjectId(filter._id);
+  }
+  return filter;
 };
