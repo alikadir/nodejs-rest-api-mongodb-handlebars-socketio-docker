@@ -11,4 +11,9 @@ rootRouter.use('/users', userRouter);
 
 rootRouter.use(['/home', '/index', '/'], homeRouter);
 
+// Handle 404 - Keep this as a last route
+rootRouter.use(function (req, res) {
+  res.status(404).render('404');
+});
+
 export default rootRouter;
