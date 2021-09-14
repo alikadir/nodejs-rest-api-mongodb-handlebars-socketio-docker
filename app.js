@@ -15,6 +15,4 @@ app.set('view engine', 'handlebars');
 
 app.use('/', rootRouter);
 
-console.log(process.env.DATABASE_URL);
-
 export default app;
