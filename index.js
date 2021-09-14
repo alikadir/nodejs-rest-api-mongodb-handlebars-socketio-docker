@@ -1,4 +1,4 @@
-import 'dotenv/config.js';
+import 'dotenv-flow/config.js';
 import app from './app.js';
 
 app.listen(3000, () => {
