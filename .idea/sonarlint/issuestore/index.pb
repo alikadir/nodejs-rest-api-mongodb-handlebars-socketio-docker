@@ -19,3 +19,18 @@ E
 views/home.handlebars,a/4/a49ae3163d34ab60dee59f8e2eaa7f5d9a11e617
 M
 views/layouts/main.handlebars,b/0/b02d68b1477350104d6d557dbb80a609399e10ed
+A
+data/product.json,2/3/23d5c9fcaf8ac3245725fe9c4b91b9a4a705698e
+S
+#middlewares/validationMiddleware.js,c/a/ca6b6d08234719bdbe7f0a339b255a1dfe937947
+H
+routers/productRouter.js,c/5/c5ea9a5749b3b549f1d181f6a7cbba29b2701df6
+D
+views/404.handlebars,8/a/8a130411d4ecc826b4e4af08c01a51309f07df0a
+E
+routers/rootRouter.js,7/1/717817d1f600f97bb5742a492359bde2bc0819bf
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
