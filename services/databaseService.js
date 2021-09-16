@@ -20,6 +20,13 @@ const doDatabaseOperation = async (operation) => {
   return result;
 };
 
+export const findAll = async (collectionName, filter) => {
+  return doDatabaseOperation((db) => {
+    filter = filterModify(filter);
+    return db.collection(collectionName).find(filter).toArray();
+  });
+};
+
 export const insertRecord = async (collectionName, data) => {
   return doDatabaseOperation(async (db) => {
     if (Array.isArray(data)) {
@@ -48,7 +55,7 @@ export const updateRecord = async (collectionName, filter, data) => {
 export const deleteRecord = async (collectionName, filter) => {
   return doDatabaseOperation(async (db) => {
     filter = filterModify(filter);
-    db.collection(collectionName).deleteMany(filter);
+    return db.collection(collectionName).deleteMany(filter);
   });
 };
 

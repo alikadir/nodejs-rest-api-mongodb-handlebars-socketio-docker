@@ -1,10 +1,23 @@
 import express from 'express';
 import { body, param } from 'express-validator';
 import { validationMiddleware } from '../middlewares/validationMiddleware.js';
-import { insertRecord, replaceRecord, updateRecord } from '../services/databaseService.js';
+import {
+  deleteRecord,
+  findAll,
+  insertRecord,
+  replaceRecord,
+  updateRecord,
+} from '../services/databaseService.js';
 const productRouter = express.Router();
 
 const collectionName = 'product';
+
+productRouter.get('/', async (req, res) => {
+  // /products?device.cpu.type=i11
+  const filter = req.query;
+  const result = await findAll(collectionName, filter);
+  res.json(result);
+});
 
 productRouter.post(
   '/',
@@ -40,6 +53,12 @@ productRouter.patch('/:productId', async (req, res) => {
   const productId = req.params.productId;
   const product = req.body;
   const result = await updateRecord(collectionName, { _id: productId }, product);
+  res.json(result);
+});
+
+productRouter.delete('/:productId', async (req, res) => {
+  const productId = req.params.productId;
+  const result = await deleteRecord(collectionName, { _id: productId });
   res.json(result);
 });
 
