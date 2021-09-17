@@ -1,5 +1,6 @@
 import express from 'express';
 import { body, param } from 'express-validator';
+import { logMiddleware } from '../middlewares/logMiddleware.js';
 import { validationMiddleware } from '../middlewares/validationMiddleware.js';
 import {
   deleteRecord,
@@ -9,6 +10,8 @@ import {
   updateRecord,
 } from '../services/databaseService.js';
 const productRouter = express.Router();
+
+productRouter.use(logMiddleware);
 
 const collectionName = 'product';
 
@@ -60,13 +63,6 @@ productRouter.delete('/:productId', async (req, res) => {
   const productId = req.params.productId;
   const result = await deleteRecord(collectionName, { _id: productId });
   res.json(result);
-});
-
-// middleware for product router
-productRouter.use(async (req, res, next) => {
-  console.log('product router call start ' + req.method);
-  await next();
-  console.log('product router call end ' + req.method);
 });
 
 export default productRouter;

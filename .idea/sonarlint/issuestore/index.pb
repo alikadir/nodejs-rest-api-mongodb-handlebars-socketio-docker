@@ -4,8 +4,6 @@
 T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
 C
-public/css/main.css,d/0/d0f1886fc0a0279f9205fc77bd66c286db31a447
-C
 docker-compose.yaml,e/f/ef8def03dc8f162799089e9b5f4321201c8810d5
 E
 routers/homeRouter.js,e/5/e5ad0d99e0d19e3e6468852424ef9c901778f846
@@ -17,8 +15,6 @@ P
  views/partials/header.handlebars,4/d/4d2d8bd533473c87ab9b239044b855c49040794a
 E
 views/home.handlebars,a/4/a49ae3163d34ab60dee59f8e2eaa7f5d9a11e617
-M
-views/layouts/main.handlebars,b/0/b02d68b1477350104d6d557dbb80a609399e10ed
 A
 data/product.json,2/3/23d5c9fcaf8ac3245725fe9c4b91b9a4a705698e
 S
