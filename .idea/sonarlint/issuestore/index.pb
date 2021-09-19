@@ -29,5 +29,3 @@ A
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 C
 public/css/main.css,d/0/d0f1886fc0a0279f9205fc77bd66c286db31a447
-6
-app.js,4/a/4a68969ef8e858229267b842dedf42ab5dde4d50
