@@ -19,5 +19,18 @@
     "mongo-dot-notation": "^2.0.0",
     "mongodb": "^4.1.1",
     "validator": "^13.6.0"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "*.handlebars",
+          "*.hbs"
+        ],
+        "options": {
+          "parser": "html"
+        }
+      }
+    ]
   }
 }

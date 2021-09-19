@@ -7,10 +7,6 @@ C
 docker-compose.yaml,e/f/ef8def03dc8f162799089e9b5f4321201c8810d5
 E
 routers/homeRouter.js,e/5/e5ad0d99e0d19e3e6468852424ef9c901778f846
-Q
-!views/partials/counter.handlebars,b/1/b180201876d71da6ddb058f408d4dc21a11bbf15
-P
- views/partials/header.handlebars,4/d/4d2d8bd533473c87ab9b239044b855c49040794a
 A
 data/product.json,2/3/23d5c9fcaf8ac3245725fe9c4b91b9a4a705698e
 S
@@ -25,7 +21,3 @@ A
 :
 
 .env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-C
-public/css/main.css,d/0/d0f1886fc0a0279f9205fc77bd66c286db31a447

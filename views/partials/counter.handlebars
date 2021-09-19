@@ -2,6 +2,10 @@
 <p id="counterElm">{{initialValue}}</p>
 
 <script>
-  setInterval(()=> { let counterElm = document.getElementById("counterElm"); counterElm.innerText =
-  (parseInt(counterElm.textContent) + 1).toString(); }, 100);
+  setInterval(() => {
+    let counterElm = document.getElementById("counterElm");
+    const count = parseInt(counterElm.textContent) + 1;
+    counterElm.innerText = count.toString();
+    console.assert(count < 1000, "count greater than 1000");
+  }, 100);
 </script>
