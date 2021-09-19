@@ -1,0 +1,38 @@
+<h3>Socket Communication</h3>
+<form>
+  <label>
+    Send Message
+    <input id="txtMessage" />
+  </label>
+  <button id="btnSend">SEND</button>
+</form>
+
+<ul id="txtLog"></ul>
+
+<script type="application/javascript">
+  window.addEventListener("DOMContentLoaded", () => {
+    const btnSend = document.getElementById("btnSend");
+    const txtMessage = document.getElementById("txtMessage");
+    const txtLog = document.getElementById("txtLog");
+
+    const socket = io();
+
+    socket.on("chat message", (msg) => {
+      txtLog.innerHTML += `<li>${msg}</li>`;
+    });
+
+    btnSend.onclick = (e) => {
+      e.preventDefault();
+
+      const message = txtMessage.value;
+      socket.emit("chat message", message);
+      txtMessage.value = "";
+    };
+  });
+</script>
+
+<script
+  src="https://cdn.socket.io/4.1.2/socket.io.min.js"
+  integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg"
+  crossorigin="anonymous"
+></script>

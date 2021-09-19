@@ -3,7 +3,7 @@
 <h2>User List</h2>
 <ul>
   {{#each users}}
-    <li>{{this.name}}</li>
+  <li>{{this.name}}</li>
   {{/each}}
 </ul>
-{{> counter initialValue=978}}
+{{> counter initialValue=978}} {{> socket }}

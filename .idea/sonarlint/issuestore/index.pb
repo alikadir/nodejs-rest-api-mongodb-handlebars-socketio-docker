@@ -11,13 +11,21 @@ A
 data/product.json,2/3/23d5c9fcaf8ac3245725fe9c4b91b9a4a705698e
 S
 #middlewares/validationMiddleware.js,c/a/ca6b6d08234719bdbe7f0a339b255a1dfe937947
-8
-index.js,a/7/a77b15c0d64cf6111e025645e562faf8ccabb9d7
-A
-package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 :
 
 .env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
+K
+services/databaseService.js,4/5/453320373d051eaa3f97554c31832c1bd6acd0e7
+D
+views/404.handlebars,8/a/8a130411d4ecc826b4e4af08c01a51309f07df0a
+L
+middlewares/logMiddleware.js,6/8/68e36c5c816691d60f6f221bfd004951cdb0df2d
+E
+routers/userRouter.js,4/2/423a5b665afbc258e8e34bb677b3f9356593b665
+H
+routers/productRouter.js,c/5/c5ea9a5749b3b549f1d181f6a7cbba29b2701df6
+P
+ views/partials/header.handlebars,4/d/4d2d8bd533473c87ab9b239044b855c49040794a
