@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-rest-api-mongodb-handlebars",
+  "name": "nodejs-rest-api-mongodb-handlebars-socketio-docker",
   "version": "1.0.0",
   "description": "",
   "type": "module",

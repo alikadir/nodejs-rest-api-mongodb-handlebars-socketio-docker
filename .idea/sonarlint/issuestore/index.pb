@@ -29,3 +29,13 @@ H
 routers/productRouter.js,c/5/c5ea9a5749b3b549f1d181f6a7cbba29b2701df6
 P
  views/partials/header.handlebars,4/d/4d2d8bd533473c87ab9b239044b855c49040794a
+M
+views/layouts/main.handlebars,b/0/b02d68b1477350104d6d557dbb80a609399e10ed
+E
+routers/rootRouter.js,7/1/717817d1f600f97bb5742a492359bde2bc0819bf
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+Q
+!views/partials/counter.handlebars,b/1/b180201876d71da6ddb058f408d4dc21a11bbf15
+E
+views/home.handlebars,a/4/a49ae3163d34ab60dee59f8e2eaa7f5d9a11e617
