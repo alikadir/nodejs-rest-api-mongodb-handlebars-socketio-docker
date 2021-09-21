@@ -6,9 +6,6 @@ import { socketServiceInit } from "./services/socketService.js";
 import rootRouter from "./routers/rootRouter.js";
 
 const app = express();
-const server = http.createServer(app);
-
-await socketServiceInit(server);
 
 //use express instead of body-parser
 app.use(express.json());
@@ -21,5 +18,8 @@ app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
 app.use("/", rootRouter);
+
+const server = http.createServer(app);
+await socketServiceInit(server);
 
 export { server };
